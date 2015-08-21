@@ -35,7 +35,6 @@ namespace ChatBot
 
         public string ToString(string format, IFormatProvider formatProvider)
         {
-            //TODO:
             throw new NotImplementedException();
         }
 
