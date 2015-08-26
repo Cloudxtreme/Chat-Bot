@@ -40,6 +40,7 @@ namespace ChatBot
             startTime = DateTime.UtcNow; // Weather forecast begins at the current time
             endTime = DateTime.UtcNow.AddDays(1); // Weather forecast ends a day after the current time -- Daily weather forecast
             weatherUnit = unitType.m; // Weather forecast generated in metric (SI) units
+            forecastParametersType = new weatherParametersType();
             forecastParametersType.maxt = true; // Maximum temperature
             forecastParametersType.mint = true; // Minimum temperature
             forecastParametersType.maxrh = true; // Maximum relative humidity

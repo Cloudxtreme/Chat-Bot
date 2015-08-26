@@ -18,5 +18,13 @@ namespace UnitTests
             string value= client.LatLonListZipCode("20912");
             Console.WriteLine(value);
         }
+
+        [Test]
+        public void SomethingWeather()
+        {
+            Weather client = new Weather();
+            client.ForecastWeather();
+        }
+        
     }
 }
