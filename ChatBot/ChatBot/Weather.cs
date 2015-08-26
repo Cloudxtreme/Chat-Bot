@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using ChatBot.ndfdXML;
+using ChatBot.Wcf;
 
 namespace ChatBot
 {
@@ -56,6 +58,12 @@ namespace ChatBot
         public void ForecastWeather()
         {
             ndfdXMLPortTypeClient ndfdXmlClient = new ndfdXMLPortTypeClient();
+
+            HttpTransportBindingElement transportBinding = new HttpTransportBindingElement();
+
+            //https://stackoverflow.com/questions/7033442/using-iso-8859-1-encoding-between-wcf-and-oracle-linux
+            CustomBinding binding = new CustomBinding(new CustomTextMessageBindingElement("iso-8859-1", "text/xml", MessageVersion.Soap11), transportBinding);
+            ndfdXmlClient.Endpoint.Binding = binding;
 
             string client = ndfdXmlClient.NDFDgen(longitude, latitude, weatherForecastProductType, startTime, endTime, weatherUnit,
                 forecastParametersType);
