@@ -8,6 +8,9 @@ using System.Speech.Recognition;
 
 namespace ChatBot
 {
+    /// <summary>
+    /// What someone said.
+    /// </summary>
     public class Translation
     {
         public SpeechRecognizer recognizer;
