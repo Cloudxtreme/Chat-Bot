@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatBot.cs" />
+    <Compile Include="ExerciseServices.cs" />
     <Compile Include="Service References\ndfdXML\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
