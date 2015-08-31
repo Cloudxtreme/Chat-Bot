@@ -23,7 +23,7 @@ namespace UnitTests
         public void SomethingWeather()
         {
             Weather client = new Weather();
-            client.ForecastWeather();
+            client.ParseWeather();
         }
         
     }
